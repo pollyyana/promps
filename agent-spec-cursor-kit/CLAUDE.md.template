@@ -1,0 +1,38 @@
+# CLAUDE.md
+
+> Arquivo de contrato do projeto. O Cursor carrega este arquivo mesmo **sem** Claude Code.
+> Várias skills/gates do agent-spec ainda referenciam `CLAUDE.md` por nome.
+
+## Visão do Projeto
+<!-- Descreva o produto em 2–4 linhas. -->
+
+## Stack
+<!-- Linguagem, frameworks, como rodar testes. -->
+
+## Como rodar
+<!-- build / test / run. -->
+
+## Regras de comportamento (não negocie)
+1. **Incerteza → leia o arquivo ou rode `grep`. Nunca chute.**
+2. **Menor delta possível.** Fora de escopo → reporte, não execute sem pedir.
+3. **Não toque em código fora do escopo sem autorização explícita.**
+4. **"Funciona" só com evidência.** Não rodou → diga "não rodei".
+5. **Ações destrutivas exigem confirmação prévia.**
+
+## Arquitetura
+<!-- Onde vivem features, platform, ADRs. -->
+
+## Convenções
+<!-- Idioma do código, naming, config. -->
+
+## Onde coisas novas vão
+<!-- Paths para feature nova, queries, etc. -->
+
+## No Cursor (Agent chat) — sem Claude Code
+
+- Skills: `/agent-spec-...` no Agent chat.
+- Ex.: `/agent-spec-sdd-run-tasks docs/specs/features/<feature>/v1/task_plan.md <seu-executor>`
+- Subagents via `Task`; gates = `agent-spec-qa-validator` + `agent-spec-staff-architecture-review`.
+- Binding: `.cursor/skills/_shared/host-compat-cursor.md`.
+- Guia: `/agent-spec-guide`
+- Detalhes também em `AGENTS.md`.
